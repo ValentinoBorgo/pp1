@@ -16,14 +16,14 @@
 <ul class = "lista">
 {% for producto in productos %}
 <li>
-<div>
-    <img  src={{producto.imagen}}  />
-</div>
+    <div>
+        <img  src={{producto.imagen}}  />
+    </div>
 <div>
     <h1>Producto {{producto.id}}</h1>
     <p>Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de 
     borradores de diseño para probar el diseño visual antes de insertar el texto final</p>
-    <button>Ver Detalles</button>
+    <button type="submit" onclick="detalleProducto({{producto.id}})">Ver Detalles</button>
     <b>Precio : {{producto.precio}}</b>
 </div>
 </li>    

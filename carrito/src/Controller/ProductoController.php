@@ -19,6 +19,18 @@ class ProductoController extends AbstractController
  return $this->render('producto/lista.html.twig', ['productos' => $productos]);
 
  }
+
+ /**
+ * @Route("/producto/id", name="detalle_producto")
+ */
+public function detalleProducto(Almacen $alma, $id): Response
+{
+   $producto = $alma->find($id);
+   echo "PUTO DEL CULO";
+
+return $this->render('producto/detalle.html.twig', ['productoDeta' => $producto]);
+
+}
 }
 
 
