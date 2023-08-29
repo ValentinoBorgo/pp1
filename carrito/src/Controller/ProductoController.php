@@ -26,11 +26,13 @@ class ProductoController extends AbstractController
 public function detalleProducto(Almacen $alma, $id): Response
 {
    $producto = $alma->find($id);
-   echo "PUTO DEL CULO";
+
+   echo("<script>console.log('PHP');</script>");
 
 return $this->render('producto/detalle.html.twig', ['productoDeta' => $producto]);
 
 }
+
 }
 
 
