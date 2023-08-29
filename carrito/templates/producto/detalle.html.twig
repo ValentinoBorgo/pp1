@@ -1,8 +1,18 @@
-{% extends 'lista.html.twig' %}
 
 {% block body %} 
 <h1>Detalles de producto</h1>
+<div class="detalles">
+
 <div>
-        <img  src={{productoDeta.imagen}}  />
+        <img src="{{ asset(productoDeta.imagen) }}"  />
+</div>
+<br></br>
+<div>
+        <b>Producto {{productoDeta.id}}</b>
+        <b>Lorem ipsum dolor sit amet</b>
+        <b>Precio :  ${{productoDeta.precio}}</b>
+        <a href="{{ path('listar_productos')}}">Volver</a>
+</div>
+
 </div>
 {% endblock %}

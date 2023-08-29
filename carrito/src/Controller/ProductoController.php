@@ -21,13 +21,11 @@ class ProductoController extends AbstractController
  }
 
  /**
- * @Route("/producto/id", name="detalle_producto")
+ * @Route("/producto/{id}", name="detalle_producto")
  */
 public function detalleProducto(Almacen $alma, $id): Response
 {
    $producto = $alma->find($id);
-
-   echo("<script>console.log('PHP');</script>");
 
 return $this->render('producto/detalle.html.twig', ['productoDeta' => $producto]);
 
