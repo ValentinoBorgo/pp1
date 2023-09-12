@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% if error %}
+        <div>Usuario o contraseña incorrecta</div>
+    {% endif %}
+    
+    <header>
+    <h1>CARRITO DE COMPRAS</h1>
+    <button type="submit">logout</button>
+    </header>
+    
+    <form action="{{ path('app_login') }}" method="post">
+        <label for="username">Email:</label>
+        <input type="text" id="username" name="_username" value="{{ last_username }}"/>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="_password"/>
+        <button type="submit">login</button>
+    </form>
+
+{% endblock %}

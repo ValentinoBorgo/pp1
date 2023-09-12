@@ -18,7 +18,7 @@ class ProductoController extends AbstractController
  public function listarProductos(ManagerRegistry $doctrine): Response
  {
    $repository = $doctrine->getRepository(Producto::class);
-    $productos = $repository->findAll();
+   $productos = $repository->findAll();
 
     return $this->render('producto/lista.html.twig', ['productos' => $productos]);
 
