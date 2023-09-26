@@ -42,5 +42,4 @@ public function detalleProducto(ManagerRegistry $doctrine, int $id): Response
 
 }
 
-
 ?>
